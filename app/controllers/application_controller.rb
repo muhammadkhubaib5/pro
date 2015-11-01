@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   #	binding.pry
   	if session[:logout].present?
   		session[:id] = nil
-			session[:username] = nil
+			session[:username] = nil || 0
 			session[:password] = nil
 			session[:logout] = false	
   	end
