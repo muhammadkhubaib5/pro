@@ -1,0 +1,49 @@
+
+		<legend>Sign Up</legend>
+
+			<% if @user.errors.present? %>
+			<div>
+				<p><%= @user.errors.messages[:password].first %></p>
+			</div>
+			<% end %>
+
+			<%= form_for @user do |f| %>
+	<%= f.label :f_name, "First Name"%>
+					<%= f.text_field :f_name %>
+				
+			<br>
+
+	<%= f.label :l_name, "Last Name"%>
+					<%= f.text_field :l_name %>
+				
+			<br>
+
+	<%= f.label :username, "User Name"%>
+			
+					<%= f.text_field :username %>
+				
+			<br>
+
+	<%= f.label :email, "Email"%>
+			
+					<%= f.text_field :email %>
+				
+	
+			<br>
+
+	<%= f.label :password, "Password"%></label>
+			
+					<%= f.password_field :password %>
+				
+
+			<br>
+
+	
+
+<br>
+	
+			<%= f.submit 'Sign Up'%>
+		
+			<%= f.submit 'Clear Form', type: 'reset' %>
+		
+<%end%>

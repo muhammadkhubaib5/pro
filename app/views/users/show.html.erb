@@ -1,0 +1,7 @@
+<h1>Welcome <%= @user.f_name %></h1>
+<p>Your username is: <%= @user.username %></p>
+<h2>You was being created on: <%= @user.created_at %></h2>
+
+
+<a href= "<%= users_path %>" > Home</a>
+<a href="<%= logout_user_path(@user.id) %>">LOGOUT </a>
